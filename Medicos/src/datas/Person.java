@@ -1,55 +1,69 @@
 package datas;
 
-abstract  class Person {
+  abstract class Person {
     private String name;
     private String surnmane;
     private int age;
-    private boolean foreigners;
-    protected  Person(String name, String surnmane, int age, boolean foreigners) {
-        this.name = name;
-        this.surnmane = surnmane;
-        this.age = age;
-        this.foreigners = foreigners;
+    private Gender gender;
+
+
+   
+
+    public Person(String name, String surnmane, int age, Gender gender) {
+      this.name = name;
+      this.surnmane = surnmane;
+      this.age = age;
+      this.gender = gender;
+    }
+
+    public Person(){}
+
+
+    public Gender getGender() {
+      return gender;
+    }
+
+
+    public void setGender(Gender gender) {
+      this.gender = gender;
     }
 
 
 
-public abstract  String info(String name, String surname, int age) ;
 
 
+  
 
-@Override
-    public String toString() {
-        return "datas.Person [name=" + name + ", surnmane=" + surnmane + ", age=" + age + ", foreigners=" + foreigners
-                + ", getName()=" + getName() + ", getSurnmane()=" + getSurnmane() + ", getAge()=" + getAge()
-                + ", isForeigners()=" + isForeigners() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-                + ", toString()=" + super.toString() + "]";
-    }
+
+    abstract  String info(String name, String surname, int age);
 
 
     public String getName() {
-        return name;
+      return name;
     }
+
     public void setName(String name) {
-        this.name = name;
+      this.name = name;
     }
+
     public String getSurnmane() {
-        return surnmane;
+      return surnmane;
     }
+
     public void setSurnmane(String surnmane) {
-        this.surnmane = surnmane;
+      this.surnmane = surnmane;
     }
+
     public int getAge() {
-        return age;
+      return age;
     }
+
     public void setAge(int age) {
-        this.age = age;
+      this.age = age;
     }
-    public boolean isForeigners() {
-        return foreigners;
-    }
-    public void setForeigners(boolean foreigners) {
-        this.foreigners = foreigners;
-    }
+
+  
+
     
-}
+ 
+  }

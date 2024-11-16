@@ -2,13 +2,13 @@ package datas;
 
 public class Disease {
     private String name;
-    private int DiseaseSeverity;
-    private int level;
+    private String DiseaseSeverity;
 
-    public Disease(int DiseaseSeverity, int level, String name) {
-        this.DiseaseSeverity = DiseaseSeverity;
-        this.level = level;
+
+    public Disease(String name, String diseaseSeverity) {
         this.name = name;
+
+        DiseaseSeverity = diseaseSeverity;
     }
 
     public String getName() {
@@ -19,29 +19,13 @@ public class Disease {
         this.name = name;
     }
 
-    public int getDiseaseSeverity() {
+    public String getDiseaseSeverity() {
         return DiseaseSeverity;
     }
 
-    public void setDiseaseSeverity(int DiseaseSeverity) {
-        this.DiseaseSeverity = DiseaseSeverity;
+    public void setDiseaseSeverity(String diseaseSeverity) {
+        DiseaseSeverity = diseaseSeverity;
     }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-
-    
-
-
-
-
-
 
 }
 
