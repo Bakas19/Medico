@@ -46,8 +46,8 @@ public class Main {
                     break;
 
                 case 4 : doctor.avail();
-                    System.out.println("Escreve o indice");
-                    int inice = input.nextInt();
+
+
 
 
                             break;

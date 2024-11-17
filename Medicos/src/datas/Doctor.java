@@ -27,7 +27,7 @@ private int experience;
 
 
 
-
+Scanner input = new Scanner(System.in);
 
 
 
@@ -55,7 +55,7 @@ private int experience;
         return  "Professional info" + specialty + " with " + experience +" experience";
     }
   
-public  HashMap<String, String> avail(){
+public  Map<String, String> avail(){
 
     HashMap<String, String> days = new HashMap<>();
 
@@ -64,8 +64,30 @@ public  HashMap<String, String> avail(){
     days.put("Friday", "From 10am to 1pm to ");
 
 
-System.out.println(days.keySet() + "\n" +
-        ""+ days.values());
+for (Map.Entry<String,  String> dias : days.entrySet() ){
+
+    System.out.println("Available  : " + dias.getKey() + ",  " + dias.getValue());
+
+      String value = dias.getValue();
+
+
+}
+    System.out.println("Selecione o dia que deseja ");
+
+
+    String choice = input.next();
+    String key = days.get(choice);
+
+
+
+    if (days.containsKey(choice))
+    {
+        System.out.println("Paulo, vocce marcou a sua data para " + key );
+    } else
+    {
+        System.out.println( choice+  " Nao existe");
+    }
+
     return days;
 
 
