@@ -27,11 +27,11 @@ public class Appointment {
 
     @Override
     public String toString (){
-        return "Nome " +  getPatient().getName() + " " + getPatient().getSurnmane() +
-                " sexo: " + getPatient().getGender() + " " + getPatient().getAge()  +
-                " a sua foi marcada para " + getDay() +
+        return " " +  getPatient().getName() + " " + getPatient().getSurnmane() +
+                " пол: " + getPatient().getGender() + " " + getPatient().getAge()  +
+                " записался к врачу на  " + getDay() +
                 " as " + getHour() +
-                " com " + getPatient().getSymptoms() + "";
+                " симптомы  " + getPatient().getSymptoms() + "";
     }
 
 
@@ -40,10 +40,12 @@ public class Appointment {
         List<Appointment> appointments = new ArrayList<>();
 
         // Adicionar consultas
-        appointments.add(new Appointment("Monday", "11:00",
-                new Patient("Paulo", "Baks", 25, Gender.MALE, "dor de cabeca")));
-        appointments.add(new Appointment("Monday", "11:00",
-                new Patient("Mauro", "Jobr", 25, Gender.MALE, "dor de cabeca")));
+        appointments.add(new Appointment("понедельник", "11:00",
+                new Patient("Paulo", "Baks", 25, Gender.MALE, "головной боли")));
+        appointments.add(new Appointment("пятница", "11:00",
+                new Patient("Mark", "Baks", 25, Gender.MALE, "головной боли")));
+        appointments.add(new Appointment("среда", "11:00",
+                new Patient("John", "Baks", 25, Gender.MALE, "головной боли")));
 
 
 

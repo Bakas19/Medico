@@ -33,10 +33,7 @@ Scanner input = new Scanner(System.in);
 
     @Override
     public String toString() {
-        return "Doctor [speciality=" + speciality + ", experience=" + experience + ", getGender()=" + getGender()
-                + ", getName()=" + getName() + ", avail()=" + avail() + ", getSurnmane()=" + getSurnmane()
-                + ", getAge()=" + getAge() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-                + ", toString()=" + super.toString() + "]";
+        return " name " + getName() + " " + getSurnmane() + "sexo " + getAge() + " " + getGender() + " " + getSpeciality() + "" + getExperience();
     }
 
 
@@ -47,42 +44,44 @@ Scanner input = new Scanner(System.in);
 
     @Override
    public String info(String name, String surname, int age) {
-       return "Name + " + name + " " + surname + " " + age+ "years old" ;
+       return "  " + name + " " + surname + ", " + age+ " лет, " + info("стоматолог" , 5) ;
     }
 
-  public   String info (String specialty, int experience ){
+  public   String info ( String specialty, int experience ){
 
-        return  "Professional info" + specialty + " with " + experience +" experience";
+        return  " " + specialty + " С опытом работы " + experience +" лет";
     }
   
 public  Map<String, String> avail(){
 
     HashMap<String, String> days = new HashMap<>();
 
-    days.put("Monday", "From 10am to 1pm to ");
-    days.put("Tuesday", "From 08 am to 1pm to ");
-    days.put("Friday", "From 10am to 1pm to ");
+    days.put("Понедельник", "С 10 утра до 13 часов");
+    days.put("Вторник", "С 09 утра до 15 часов ");
+    days.put("Пятница", "С 10 утра до 15 часов ");
 
 
 for (Map.Entry<String,  String> dias : days.entrySet() ){
 
-    System.out.println("Available  : " + dias.getKey() + ",  " + dias.getValue());
+    System.out.println("Доступно  : " + dias.getKey() + ",  " + dias.getValue());
 
       String value = dias.getValue();
 
 
 }
-    System.out.println("Selecione o dia que deseja ");
+    System.out.println("Выберите нужный день");
 
 
     String choice = input.next();
     String key = days.get(choice);
+    System.out.println("Пожалуйста, напишите ваше имя, чтобы записаться на прием");
+    String name = input.next();
 
-
+Doctor doctor = new Doctor();
 
     if (days.containsKey(choice))
     {
-        System.out.println("Paulo, vocce marcou a sua data para " + key );
+        System.out.println( "Привет"+ name + " ты записался на прием к доктору " + doctor.info("Mark", "Job", 58) + " в " + key );
     } else
     {
         System.out.println( choice+  " Nao existe");
@@ -94,6 +93,27 @@ for (Map.Entry<String,  String> dias : days.entrySet() ){
  }
 
 
+    public String getSpeciality() {
+        return speciality;
+    }
 
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
 
+    public Scanner getInput() {
+        return input;
+    }
+
+    public void setInput(Scanner input) {
+        this.input = input;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
 }

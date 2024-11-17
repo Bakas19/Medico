@@ -20,14 +20,14 @@ private String Symptoms;
 
     @Override
     public String info(String name, String surname, int age) {
-        return "Name + " + name + " " + surname + " " + age+ "years old" ;
+        return "  " + name + " " + surname + ", " + age+ " лет, "  ;
     }
 
 
 
     public String detail( Disease disease, String name, String surname, int age ){
-        System.out.println("Information about patiente");
-        return name + ""+ surname + " " + age + " " + disease.getName() + " " + disease.getDiseaseSeverity() ;
+        System.out.println("Информация о пациенте");
+        return name + " "+ surname + ", " + age + " лет," + " Название заболевания: " + disease.getName() + ", Состояние заболевания: " + disease.getDiseaseSeverity() ;
 
     }
 

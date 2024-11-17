@@ -16,14 +16,14 @@ public class Main {
 
 
         System.out.println("------------WELCOME---------- ");
-        System.out.println("Chiuce the option");
+        System.out.println("Выберите вариант");
 
-        System.out.println("1 Lista dos pacientes \n" +
-                "2 Ver os dados do medico\n" +
-                "3 Ver os dados do paciente \n" +
-                "4 Marcar a consulta\n" +
-                "5 ver os dias disponives\n" +
-                "6 Fechar");
+        System.out.println("1 Список пациентов \n" +
+                "2 Просмотр данных врача\n" +
+                "3 Просмотр информации о пациенте \n" +
+                "4 Записаться на прием\n"
+
+                );
 
 
 
@@ -38,7 +38,8 @@ public class Main {
                     appointment.appointmentList();
                     break;
 
-                case 2:  System.out.println(doctor.info("Pedro", "Job", 15));
+                case 2:
+                    System.out.println(patient.detail(new Disease("Головная боль", "Серьезное состояние "), "Паулу", "Бака", 54));
 
                    break;
                 case 3 :
